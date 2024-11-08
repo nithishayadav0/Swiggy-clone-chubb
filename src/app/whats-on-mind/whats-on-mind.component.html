@@ -1,0 +1,111 @@
+
+    <!-- <div class="flex justify-between mr-24">
+        <h1 class="font-bold font-sans text-2xl">What's on your Mind?</h1>
+        <div class="flex-end">
+            <button (click)="moveLeft()" class="mr-4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoh5acUOOmQRCbwrlrqsXJjksHBQu-r_0Ulw&s" class="w-5"></button>
+            <button (click)="moveRight()"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKl-3jwzr5iU0M4IQpQBvE20xYWvJu18vbQ&s" class="w-5"></button>
+        </div>    
+    </div> -->
+    <!-- <div class="flex py-10 px-10 my-10 justify-between">
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/frjm2fuc175aezdkya1d" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Biryani</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-08/22/full/1724302552-7021.jpeg?im=FeatureCrop,size=(826,465)" alt="Card image">
+            <h1 class="text-gray-500 text-xl">South Indian</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIibPbOeDQQscm9g-fDNdCvROokQJukg8nYQ&s" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Pizzas</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF7u5W-MEirZta6HOf7KOEan_v42zZeDU7Kg&s" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Chinese</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNSaYwUwK1ifewgSUumOoggl6MTmOFP1iSDhohvhJFmQKUbfF1-864Z_Ks2aI9m5l5fks&usqp=CAU" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Burger</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://www.thespruceeats.com/thmb/hqqNrNhIpqPqV2u0T0K-IUzUsEo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-cuisine-of-north-india-1957883-d32a933f506d43f59ac38a8eb956884a.jpg" alt="Card image">
+            <h1 class="text-gray-500 text-xl">North Indian</h1>
+        </div>
+    </div> -->
+    <!-- <div [ngClass]="{'ml-10': position === 'left', 'mr-10': position === 'right'}" class="flex py-10 px-10 my-10 justify-between transition-all duration-300">
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/frjm2fuc175aezdkya1d" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Biryani</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-08/22/full/1724302552-7021.jpeg?im=FeatureCrop,size=(826,465)" alt="Card image">
+            <h1 class="text-gray-500 text-xl">South Indian</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIibPbOeDQQscm9g-fDNdCvROokQJukg8nYQ&s" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Pizzas</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF7u5W-MEirZta6HOf7KOEan_v42zZeDU7Kg&s" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Chinese</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNSaYwUwK1ifewgSUumOoggl6MTmOFP1iSDhohvhJFmQKUbfF1-864Z_Ks2aI9m5l5fks&usqp=CAU" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Burger</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://www.thespruceeats.com/thmb/hqqNrNhIpqPqV2u0T0K-IUzUsEo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-cuisine-of-north-india-1957883-d32a933f506d43f59ac38a8eb956884a.jpg" alt="Card image">
+            <h1 class="text-gray-500 text-xl">North Indian</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/frjm2fuc175aezdkya1d" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Biryani</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/frjm2fuc175aezdkya1d" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Biryani</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/frjm2fuc175aezdkya1d" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Biryani</h1>
+        </div>
+        <div class="mr-10">
+            <img class="w-24 h-24 my-2" src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/frjm2fuc175aezdkya1d" alt="Card image">
+            <h1 class="text-gray-500 text-xl ml-4">Biryani</h1>
+        </div>
+    </div> -->
+    <!-- <div class="max-w-6xl h-auto mx-auto bg-white bg-gray-80 overflow-hidden items-center">
+       
+        
+        <div class="flex py-10 px-10 my-10 justify-between transition-all duration-300">
+            <div *ngFor="let image of images | slice:0:displayedImages" class="mr-10">
+                <img class="w-24 h-24 my-2" [src]="image.src" alt="Card image">
+                <h1 class="text-gray-500 text-xl ml-4">{{ image.title }}</h1>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="max-w-6xl h-auto mx-auto bg-white bg-gray-80 overflow-hidden items-center">
+        <div class="flex justify-between mr-24">
+            <h1 class="font-bold font-sans text-2xl">What's on your Mind?</h1>
+            <div class="flex-end">
+                <button (click)="moveLeft()" class="mr-4" [disabled]="currentIndex <= 0">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoh5acUOOmQRCbwrlrqsXJjksHBQu-r_0Ulw&s" class="w-5">
+                </button>
+                <button (click)="moveRight()" [disabled]="currentIndex + imagesPerPage >= images.length">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKl-3jwzr5iU0M4IQpQBvE20xYWvJu18vbQ&s" class="w-5">
+                </button>
+            </div>    
+        </div>
+        
+        <!-- Adjust layout to be block on small screens -->
+        <div class="flex flex-col sm:flex-row py-10 px-10 my-10 justify-between transition-all duration-300">
+            <div *ngFor="let image of images | slice:currentIndex:currentIndex + imagesPerPage" class="mr-10 mb-4 sm:mb-0">
+                <img class="w-24 h-24 my-2" [src]="image.src" alt="Card image">
+                <h1 class="text-gray-500 text-xl ml-4">{{ image.title }}</h1>
+            </div>
+        </div>
+    </div>
+    
+
+

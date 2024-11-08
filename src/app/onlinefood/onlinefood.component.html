@@ -1,0 +1,42 @@
+<!-- <div class="max-w-6xl mx-auto bg-white bg-gray-80 overflow-hidden items-center">
+    <h1 class="font-bold font-sans text-2xl">Restaurants with online food delivery in Hyderabad</h1>
+    <div class="flex flex-wrap px-10 my-10  transition-all duration-300">
+   
+      <div *ngFor="let image of images;let i=index" class="w-1/4 p-2"  > 
+        <div class="bg-white rounded-xl shadow-lg p-4 transform transition-transform duration-300 hover:scale-105">
+        <div  (click)="sendImageToCart(image.name) "(click)="navigateToMenuItems(image.name) " >
+          <img class="w-full h-48 object-cover rounded-lg" [src]="image.src" alt="Card image">
+          <h1 class="text-bold text-xl mt-2">{{ image.name }}</h1>
+          <p class="text-bold">{{ image.rating }} • {{ image.time }}</p>
+          <p class="text-gray-500">{{ image.cuisines }}</p>
+          <p class="text-gray-500">{{ image.location }}</p>
+        </div>
+          <button class="text-sm bg-white shadow-lg m-4 rounded-lg" (click)="toggleButtonImage(i)">
+            <img [src]="buttonImageSrcs[i]" class="w-4 h-4">
+          </button>
+  
+        </div>
+     
+      </div>
+    </div>
+  </div>  -->
+   
+   <div class="max-w-6xl mx-auto bg-white bg-gray-80 overflow-hidden items-center">
+    <h1 class="font-bold font-sans text-2xl">Restaurants with online food delivery in Hyderabad</h1>
+    <div class="flex flex-col sm:flex-row  flex-wrap px-10 my-10 transition-all duration-300">
+        <div *ngFor="let image of images; let i = index" class="w-full sm:w-1/4 p-2">
+            <div class="bg-white rounded-xl shadow-lg p-4 transform transition-transform duration-300 hover:scale-105">
+                <div (click)="sendImageToCart(image.name)" (click)="navigateToMenuItems(image.name)">
+                    <img class="w-full h-48 object-cover rounded-lg" [src]="image.src" alt="Card image">
+                    <h1 class="text-bold text-xl mt-2">{{ image.name }}</h1>
+                    <p class="text-bold">{{ image.rating }} • {{ image.time }}</p>
+                    <p class="text-gray-500">{{ image.cuisines }}</p>
+                    <p class="text-gray-500">{{ image.location }}</p>
+                </div>
+                <button class="text-sm bg-white shadow-lg m-4 rounded-lg" (click)="toggleButtonImage(i)">
+                    <img [src]="buttonImageSrcs[i]" class="w-4 h-4">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

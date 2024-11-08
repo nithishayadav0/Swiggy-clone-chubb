@@ -1,0 +1,53 @@
+<!-- <div *ngIf="isOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full ">
+   <button  (click)="close()"  class="w-5 mt-5 "> <img src="https://img.icons8.com/ios7/600/delete-sign.png"></button>
+    <div class="flex justify-between">
+    <div>  
+        <h1 class="font-semibold text-2xl mt-5">Login</h1>
+        <p>or <span style="color:#ff5200;cursor:pointer">create an account</span></p>
+    </div>
+    <div>
+        <img  imageurl="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" width="100" height="105" imageid="" alt="img renderer" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r">
+    </div>
+    </div>
+    <input type="text" placeholder="User name"class="w-full px-5 py-5 mt-10 border border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-0"  />
+    <input type="text" placeholder="Password"class="w-full px-5 py-5 mt-10 border border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-0" />
+
+    <button class="bg-orange-600 text-white font-bold py-3 px-10 rounded-lg text-xl hover:bg-orange-700 w-full mt-7">Login</button>
+    <p class="text-sm">By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
+</div>
+</div>  -->
+<!-- <div *ngIf="isOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full">
+      <button (click)="close()" class="w-5 mt-5">
+        <img src="https://img.icons8.com/ios7/600/delete-sign.png" alt="Close">
+      </button>
+      <h1 class="font-semibold text-2xl mt-5">Login</h1>
+      <p>or <span style="color:#ff5200;cursor:pointer">create an account</span></p>
+      <input type="text" [(ngModel)]="username" placeholder="Username" class="w-full px-5 py-5 mt-5 border border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-0" />
+      <input type="password" [(ngModel)]="password" placeholder="Password" class="w-full px-5 py-5 mt-5 border border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-0" />
+      
+      <button (click)="login()" class="bg-orange-600 text-white font-bold py-3 px-10 rounded-lg text-xl hover:bg-orange-700 w-full mt-7">Login</button>
+      
+      <p *ngIf="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</p>
+      <p class="text-sm">By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
+    </div>
+  </div> -->
+<div *ngIf="isOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full">
+      <button (click)="close()" class="w-5 mt-5">
+        <img src="https://img.icons8.com/ios7/600/delete-sign.png" alt="Close">
+      </button>
+      <h1 class="font-semibold text-2xl mt-5">Login</h1>
+      <p>or <span style="color:#ff5200; cursor:pointer"  (click)="openLightbox()">create an account</span></p>
+      <input type="text" [(ngModel)]="username" placeholder="Username" class="w-full px-5 py-5 mt-5 border border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-0" />
+      <input type="password" [(ngModel)]="password" placeholder="Password" class="w-full px-5 py-5 mt-5 border border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-0" />
+      
+      <button (click)="login()" class="bg-orange-600 text-white font-bold py-3 px-10 rounded-lg text-xl hover:bg-orange-700 w-full mt-7">Login</button>
+      
+      <p *ngIf="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</p>
+      <p class="text-sm">By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
+    </div>
+    <app-register *ngIf="isROpen" [isROpen]="isROpen"></app-register>
+</div> 
+

@@ -1,0 +1,51 @@
+<div class="max-w-6xl h-auto mx-auto bg-white bg-gray-80 overflow-hidden items-center">
+  <div class="flex justify-between mr-20">
+      <h1 class="font-bold font-sans text-2xl">Top restaurant chains in Hyderabad</h1>
+      <div class="flex-end">
+          <button (click)="moveLeft()" class="mr-2" [disabled]="currentIndex <= 0">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoh5acUOOmQRCbwrlrqsXJjksHBQu-r_0Ulw&s" class="w-5">
+          </button>
+          <button (click)="moveRight()" [disabled]="currentIndex + imagesPerPage >= images.length">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKl-3jwzr5iU0M4IQpQBvE20xYWvJu18vbQ&s" class="w-5">
+          </button>
+      </div>    
+  </div>  
+  <!-- Use block layout for small screens and switch to flex on larger screens -->
+  <div class="block sm:flex sm:flex-row flex-wrap py-10 px-10 my-10 justify-between transition-all duration-300">
+      <div *ngFor="let image of images | slice:currentIndex:currentIndex + imagesPerPage; let i = index" class="mr-10 mb-4 sm:mb-0">
+          <div (click)="sendImageToCart(image.name)" (click)="navigateToMenuItems(image.name)" class="cursor-pointer">
+              <img class="w-64 h-48 my-2 rounded-2xl" [src]="image.src" alt="Card image">
+              <h1 class="text-bold text-xl">{{ image.name }}</h1>
+              <p class="text-bold">{{ image.rating }} • {{ image.time }}</p>
+              <p class="text-gray-500">{{ image.cuisines }}</p>
+              <p class="text-gray-500">{{ image.location }}</p>
+          </div>
+          <button class="text-sm bg-white shadow-lg m-4 rounded-lg" (click)="toggleButtonImage(i)">
+              <img [src]="buttonImageSrcs[i]" class="w-4 h-4">
+          </button>
+      </div>
+  </div>
+</div>
+
+<!-- <div class="max-w-6xl mx-auto bg-white bg-gray-80 overflow-hidden items-center">
+
+    <div class="flex flex-wrap px-10 my-10  transition-all duration-300">
+   
+      <div *ngFor="let image of images;let i=index" class="w-1/4 p-2"  > 
+        <div class="bg-white rounded-xl shadow-lg p-4 transform transition-transform duration-300 hover:scale-105">
+        <div  (click)="sendImageToCart(image.name) "(click)="navigateToMenuItems(image.name) " class="cursor-pointer" >
+          <img class="w-full h-48 object-cover rounded-lg" [src]="image.src" alt="Card image">
+          <h1 class="text-bold text-xl mt-2">{{ image.name }}</h1>
+          <p class="text-bold">{{ image.rating }} • {{ image.time }}</p>
+          <p class="text-gray-500">{{ image.cuisines }}</p>
+          <p class="text-gray-500">{{ image.location }}</p>
+        </div> -->
+          <!-- <button class="text-sm bg-white shadow-lg m-4 rounded-lg" (click)="toggleButtonImage(i)">
+            <img [src]="buttonImageSrcs[i]" class="w-4 h-4">
+          </button>
+   -->
+        <!-- </div>
+     
+      </div>
+    </div>
+  </div> -->

@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+<div *ngIf="isMenuItemsVisible" class="max-w-3xl h-auto mx-auto bg-white bg-gray-80 overflow-hidden items-center mt-10">
+
+    <h2><b class="text-lg">{{ imageName }}</b></h2>
+    <div class="bg-white shadow-lg m-8 rounded-lg px-10 p-8">
+        <p>4.1 (3.7K+ ratings) •₹300 for two</p>
+        <p style="color:rgb(238, 109, 62) ;text-decoration:underline">Pizzas</p>
+        <p>Outlet Bachupally ▾</p>
+        <p>30-35 mins</p>
+    </div>
+    <div >
+        <h1 class="  font-bold text-lg">Deals for you</h1>
+        <div class="flex">
+        <div class="bg-white shadow-lg m-8 rounded-lg px-10 p-8 ">
+            <div class="flex items-center  mt-5 space-x-4">
+            <div>
+            <img class="sc-bXCLTC dAqaCk" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_96,h_96/rng/md/ads/production/d07196b25b85d1fd9951e10c255ab737" width="48" height="48" alt="Extra ₹25 Off">
+            </div> 
+            <div>
+            <p class="font-bold">Extra 25% off</p>
+            <p>Applicable over & above coupons</p>
+            </div>
+        </div>
+        </div>
+        <div  class="bg-white shadow-lg m-8 rounded-lg px-10 p-8">
+            <div class="flex items-center  mt-5 space-x-4">
+            <div>
+            <img class="sc-bXCLTC dAqaCk" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_96,h_96/rng/md/ads/production/d07196b25b85d1fd9951e10c255ab737" width="48" height="48" alt="Extra ₹25 Off">
+            </div> 
+            <div>
+            <p class="font-bold">Extra 25% off</p>
+            <p>Apllicable over & above coupons</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <p class="text-center font-bold text-xl">Menu</p>
+    <input type="text" placeholder="Search for dishes" class="w-full bg-gray-100 mt-4 p-3">
+    
+    <div class="mt-10 flex justify-between">
+        <h1><b class="font-bold text-xl mt-10">Recommended(20)</b></h1>
+        <button (click)="navigateToCart()" class="text-xl bg-white shadow-lg m-8 rounded-lg px-4 p-2" style="color:green">Add to Cart</button>
+    </div>
+   <hr>
+   <div *ngFor="let item of filteredMenuItems">
+    <div class="flex">
+        <div class="mt-10">
+            <p class="font-bold">{{ item.name }}</p>
+            <p class="font-bold">{{ item.price }}</p>
+            <p>{{ item.description }}</p>
+        </div>
+        <div class="mt-10">
+            <img [src]="item.src" [alt]="item.name"  class="w-34 h-32" >
+            <div class="flex bg-white shadow-lg m-8 rounded-lg px-4 py-4 space-x-5">
+            <button class="text-2xl" style="color:green"  (click)="increaseCount(item)">+</button> 
+            <p class="text-2xl">{{ item.count }}</p>
+            <button class="text-2xl" style="color:green" (click)="decreaseCount(item)" >-</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <hr>
+
+    <div *ngIf="cartItemsForImage.length">
+        <h3>Cart Items for {{ imageName }}</h3>
+        <div *ngFor="let cartItem of cartItemsForImage">
+          <div *ngIf="cartItem.imageName === imageName && cartItem.count > 0">
+            <p>{{ cartItem.name }}: {{ cartItem.count }} x {{ cartItem.price }}</p>
+          </div>
+        </div>
+      </div> 
+      
+    <!-- <div class="flex">
+        <div class="mt-10">
+            <p class="font-bold">Vegg Supreme</p>
+            <p class="font-bold">379/-</p>
+            <p>Serves 1 | A supreme combination of black olives, green capsicum, mushroom, onion, spicy red paprika & juicy sweet corn with flavourful</p>
+        </div>
+        <div class="mt-10">
+            <img src="https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg" class="w-34 h-32" >
+            <button class="bg-white shadow-lg m-8 rounded-lg px-4 py-4" style="color:green">Add</button>
+        </div>
+    </div> -->
+
+     
+         
+ 
